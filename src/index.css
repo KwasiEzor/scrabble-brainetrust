@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,html,body{
+    font-family: 'Poppins',sans-serif;
+}
+p{
+    font-family: 'Noto Sans',sans-serif;
+}
+
+@layer{
+    .text-gradient{
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-sky-50 
+    }
+    .text-shadow{
+        text-shadow: 0 0 3px rgba(0,0,0,0.3);
+    }
+    .btn-secondary{
+       @apply text-shadow font-extrabold bg-gradient-to-r from-yellow-400 text-3xl to-yellow-300 uppercase tracking-wide hover:tracking-widest transition-all max-w-fit
+    }
+    button.slick-arrow.slick-next{
+        @apply text-slate-200
+    }
+    h2.showcase-heading{
+
+        @apply before:content-[""]
+                    before:absolute 
+                    before:block 
+                    before:w-[100%]
+                     before:bg-slate-500/10 
+                    before:h-4
+                    before:-bottom-1
+                    before:left-0
+                    before:-z-[1]
+                    before:rounded-xl
+    }
+    
+    .cta-area .left{
+        background-image: url("images/welcome-man.png");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #hero-title{
+        font-size: 8rem;
+    }
+}
