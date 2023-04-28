@@ -7,6 +7,7 @@ type HeadingTitleProps = {
   titleClass?: string;
   subtitleClass?: string;
   center?: boolean;
+  mx?: boolean;
 };
 
 const HeadingTitle: React.FC<HeadingTitleProps> = ({
@@ -16,12 +17,14 @@ const HeadingTitle: React.FC<HeadingTitleProps> = ({
   titleClass,
   subtitleClass,
   center,
+  mx,
 }) => {
   return (
     <div
       className={`${className}
         ${center ? "text-center" : "text-left"}
-    "w-full max-w-xl mx-auto mb-4 p-4 mb-8"`}
+        ${mx ? "mx-0" : "mx-auto"}
+    "w-full max-w-xl  mb-4 p-4 mb-8"`}
     >
       <h1
         className={`${titleClass} " text-slate-600 text-3xl md:text-4xl font-medium first-letter:text-4xl first-letter:bg-yellow-400 first-letter:px-3 first-letter:rounded-md "`}

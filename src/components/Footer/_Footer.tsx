@@ -1,6 +1,7 @@
 import { Footer } from "flowbite-react";
 import _Container from "../Others/_Container";
 import BraineLogo from "../../assets/images/logo-braine.svg";
+import { Link } from "react-router-dom";
 const _Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -15,22 +16,22 @@ const _Footer = () => {
               name=""
             />
             <Footer.LinkGroup>
-              <Footer.Link href="#" className="mr-2">
+              <Footer.Link as={"span"} href="" className="mr-2">
                 FAQ
               </Footer.Link>
-              <Footer.Link href="#" className="mr-2">
-                A Propos
+              <Footer.Link as={"span"} href="" className="mr-2">
+                <Link to={"/about"}>A Propos</Link>
               </Footer.Link>
-              <Footer.Link href="#" className="mr-2">
-                Contact
+              <Footer.Link as={"span"} href="" className="mr-2">
+                <Link to={"/contact"}>Contact</Link>
               </Footer.Link>
-              <Footer.Link href="#" className="mr-2">
-                Conditions Générales
+              <Footer.Link as={"span"} href="" className="mr-2">
+                <Link to={"/terms"}>Conditions Générales</Link>
               </Footer.Link>
             </Footer.LinkGroup>
           </div>
           <Footer.Divider />
-          <Footer.Copyright href="#" by="Braine Trust" year={year} />
+          <Footer.Copyright href="/" by="Braine Trust" year={year} />
         </div>
       </Footer>
     </_Container>

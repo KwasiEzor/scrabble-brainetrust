@@ -22,6 +22,7 @@ import HomePage from "./pages/Home/HomePage";
 import { ToastContainer } from "react-toastify";
 import AgendaPage from "./pages/Agenda/AgendaPage";
 import ScrollButton from "./components/Buttons/ScrollButton";
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/scrabble" element={<ScrabblePage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/password-reset" element={<PasswordResetPage />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
